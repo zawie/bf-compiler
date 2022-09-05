@@ -22,7 +22,11 @@ static int charToIR[NUM_CHARS];
 int main() {
 
     /*
-    Initialize scanner
+        Parse input
+    */
+
+    /*
+        Initialize scanner
     */
     SET_CHAR_IR('>', INC);
     SET_CHAR_IR('<', DEC);
@@ -33,6 +37,19 @@ int main() {
     SET_CHAR_IR('[', SRT);
     SET_CHAR_IR(']', END);
 
+    int startEndDiff = 0;
+    /*
+        Scan
+    */
+
+   if (startEndDiff != 0) {
+    if (startEndDiff > 0) {
+        printf("ERROR: Too many ['s\n");
+    } else  {
+        printf("ERROR: Too many ]'s\n");
+    }
+   }
+    
     printf("Hello, World!");
     return 0;
 }
